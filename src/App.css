@@ -53,13 +53,13 @@ body {
 .content {
   width: 90%;
   max-width: 800px;
-  padding: 3rem;
+  padding: 5rem;
   box-sizing: border-box;
 }
 
 .card {
   width: 100%;
-  height: auto;
+  height: 435px;
   background-image: url("./assets/КАРТОЧКА.png");
   position: relative;
   background-size: 100% 100%;
@@ -140,6 +140,8 @@ th {
   align-items: center;
   color: white;
   p {
+    font-size: 19px;
+    font-weight: 500;
     font-family: "Gilroy";
   }
 }
