@@ -30,7 +30,25 @@ function Cart() {
                             <p>Balance: <span>{balance}</span></p>
                         </div>
                     </div>
-                    <div className="transactions">
+                    <table className="transactions">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {parsedTransactions.map((transaction, index) => (
+                                <tr key={index}>
+                                    <td>{transaction.name}</td>
+                                    <td>{transaction.date}</td>
+                                    <td>{transaction.amount}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                    {/* <div className="transactions">
                         <div className="transaction">
                             <div className="label">Name:</div>
                             <div className="label">Date:</div>
@@ -43,7 +61,7 @@ function Cart() {
                                 <div className="amount">{transaction.amount}</div>
                             </div>
                         ))}
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
