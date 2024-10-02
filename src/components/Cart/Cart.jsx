@@ -6,7 +6,6 @@ function Cart() {
     const { year, logoUrl, entryDate, balance, transactions } = useParams();
 
     const parsedTransactions = JSON.parse(decodeURIComponent(transactions));
-    console.log("Params: ", { year, logoUrl, entryDate, balance, transactions });
 
     return (
         <div className="wrapperCart">
@@ -22,7 +21,7 @@ function Cart() {
                 <div className="card">
                     <div className="traffic-info">
                         <div className="imgDiv">
-                            <img src={logoUrl} alt="Traffic logo" />
+                            <img className='imgDynamic' src={logoUrl} alt="Traffic logo" />
                         </div>
                         <div>
                             <h1>Traffic:</h1>

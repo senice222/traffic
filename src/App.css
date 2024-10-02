@@ -19,7 +19,10 @@
 }
 body {
   background-image: url("./assets/ФОН.png");
-  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-position: center; 
+  overflow: hidden; 
 }
 .wrapperCart {
   display: flex;
@@ -29,7 +32,7 @@ body {
   height: 100vh;
   width: 100vw;
   position: relative;
-  padding-top: 6rem;
+  padding-top: 3rem;
   box-sizing: border-box;
 }
 
@@ -71,9 +74,18 @@ body {
 }
 
 .traffic-info {
-  margin-left: 40px;
+  margin-left: 20px;
+  margin-top: 10px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.imgDynamic {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-right: 10px;
+  object-fit: cover;
 }
 
 .imgDIv {
@@ -115,9 +127,9 @@ span {
 td {
   width: 33.33%;
   text-align: center;
-  font-size: 16px;
+  font-size: 17px;
   color: white;
-  height: 35px;
+  height: 40px;
   font-weight: 300;
 }
 th {
@@ -141,8 +153,8 @@ th {
   color: white;
   p {
     font-size: 19px;
-    font-weight: 500;
-    font-family: "Gilroy";
+    font-weight: 600;
+    font-family: "Atyp";
   }
 }
 
