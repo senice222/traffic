@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom';
 import '../../App.css'
 import logo from '../../assets/ЛОГО.png'
+import topRightImageUrl from '../../assets/СЛОЙ 17.png'
+import bottomLeftImageUrl from '../../assets/СЛОЙ 18.png'
 
 function Cart() {
     const { year, logoUrl, entryDate, balance, transactions } = useParams();
@@ -19,6 +21,8 @@ function Cart() {
                     </div>
                 </div>
                 <div className="card">
+                    <img className="top-right-img" src={topRightImageUrl} alt="Top Right" />
+                    <img className="bottom-left-img" src={bottomLeftImageUrl} alt="Top Right" />
                     <div className="traffic-info">
                         <div className="imgDiv">
                             <img className='imgDynamic' src={logoUrl} alt="Traffic logo" />
@@ -32,17 +36,17 @@ function Cart() {
                     <table className="transactions">
                         <thead>
                             <tr>
-                                <th>Name</th>
-                                <th>Date</th>
-                                <th>Amount</th>
+                                <th className='labels'>Name:</th>
+                                <th className='labels' style={{paddingLeft: "10px"}}>Date:</th>
+                                <th className='labels' style={{paddingLeft:"40px"}}>Amount:</th>
                             </tr>
                         </thead>
                         <tbody>
                             {parsedTransactions.map((transaction, index) => (
                                 <tr key={index}>
                                     <td>{transaction.name}</td>
-                                    <td>{transaction.date}</td>
-                                    <td>{transaction.amount}</td>
+                                    <td style={{paddingLeft: "10px"}}>{transaction.date}</td>
+                                    <td style={{paddingLeft:"40px"}}>{transaction.amount}</td>
                                 </tr>
                             ))}
                         </tbody>
